@@ -1,0 +1,581 @@
+
+[04010B0F][04010C0A][857C0000][2327453C][00232748]
+DU Setting Cal Done
+
+
+U-Boot 1.1.3 (Aug 16 2022 - 12:01:12)
+
+Board: Ralink APSoC DRAM:  32 MB
+relocate_code Pointer at: 81fc0000
+flash manufacture id: 1c, device id 70 16
+Warning: un-recognized chip ID, please update bootloader!
+============================================ 
+Ralink UBoot Version: 4.3.0.0
+-------------------------------------------- 
+ASIC 7628_MP (Port5<->None)
+DRAM component: 256 Mbits DDR, width 16
+DRAM bus: 16 bit
+Total memory: 32 MBytes
+Flash component: SPI Flash
+Date:Aug 16 2022  Time:12:01:12
+============================================ 
+icache: sets:512, ways:4, linesz:32 ,total:65536
+dcache: sets:256, ways:4, linesz:32 ,total:32768 
+
+ ##### The CPU freq = 580 MHZ #### 
+ estimate memory size =32 Mbytes
+RESET MT7628 PHY!!!!!!
+continue to starting system.
+ 0 
+disable switch phyport...
+   
+3: System Boot system code via Flash.(0xbc010000)
+do_bootm:argc=2, addr=0xbc010000
+## Booting image at bc010000 ...
+   Uncompressing Kernel Image ... OK
+No initrd
+## Transferring control to Linux (at address 8000c150) ...
+## Giving linux memsize in MB, 32
+
+Starting kernel ...
+
+
+LINUX started...
+
+ THIS IS ASIC
+Linux version 2.6.36 (jenkins@sohoici) (gcc version 4.6.3 (Buildroot 2012.11.1) ) #1 Tue Aug 16 12:04:29 CST 2022
+
+ The CPU feqenuce set to 575 MHz
+
+ MIPS CPU sleep mode enabled.
+CPU revision is: 00019655 (MIPS 24Kc)
+Software DMA cache coherency
+Determined physical RAM map:
+ memory: 02000000 @ 00000000 (usable)
+Initrd not found or empty - disabling initrd
+Zone PFN ranges:
+  Normal   0x00000000 -> 0x00002000
+Movable zone start PFN for each node
+early_node_map[1] active PFN ranges
+    0: 0x00000000 -> 0x00002000
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 8128
+Kernel command line: console=ttyS1,115200 root=/dev/mtdblock2 rootfstype=squashfs init=/sbin/init
+PID hash table entries: 128 (order: -3, 512 bytes)
+Dentry cache hash table entries: 4096 (order: 2, 16384 bytes)
+Inode-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Primary instruction cache 64kB, VIPT, , 4-waylinesize 32 bytes.
+Primary data cache 32kB, 4-way, PIPT, no aliases, linesize 32 bytes
+Writing ErrCtl register=00056ff7
+Readback ErrCtl register=00056ff7
+Memory: 29228k/32768k available (2180k kernel code, 3540k reserved, 583k data, 156k init, 0k highmem)
+NR_IRQS:128
+console [ttyS1] enabled
+Calibrating delay loop... 386.04 BogoMIPS (lpj=772096)
+pid_max: default: 4096 minimum: 301
+Mount-cache hash table entries: 512
+NET: Registered protocol family 16
+bio: create slab <bio-0> at 0
+Switching to clocksource Ralink Systick timer
+NET: Registered protocol family 2
+IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+TCP established hash table entries: 1024 (order: 1, 8192 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 1024 bind 1024)
+TCP reno registered
+NET: Registered protocol family 1
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+msgmni has been set to 57
+io scheduler noop registered
+io scheduler deadline registered (default)
+Ralink gpio driver initialized
+Serial: 8250/16550 driver, 2 ports, IRQ sharing enabled
+serial8250: ttyS0 at MMIO 0x10000d00 (irq = 21) is a 16550A
+serial8250: ttyS1 at MMIO 0x10000c00 (irq = 20) is a 16550A
+brd: module loaded
+flash manufacture id: 1c, device id 70 16
+Warning: un-recognized chip ID, please update SPI driver!
+EN25QX64A(1c 71171c71) (8192 Kbytes)
+mtd .name = raspi, .size = 0x00800000 (8M) .erasesize = 0x00010000 (64K) .numeraseregions = 0
+Creating 5 MTD partitions on "raspi":
+0x000000000000-0x000000010000 : "boot"
+0x000000010000-0x000000100000 : "kernel"
+0x000000100000-0x0000003e0000 : "rootfs"
+mtd: partition "rootfs" set to be root filesystem
+0x0000003e0000-0x0000003f0000 : "config"
+0x0000003f0000-0x000000400000 : "radio"
+Register flash device:flash0
+PPP generic driver version 2.4.2
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+Mirror/redirect action on
+u32 classifier
+    Actions configured
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (456 buckets, 1824 max)
+ip_tables: (C) 2000-2006 Netfilter Core Team, Type=Linux
+TCP cubic registered
+NET: Registered protocol family 10
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+IPv6 over IPv4 tunneling driver
+NET: Registered protocol family 17
+Ebtables v2.0 registered
+802.1Q VLAN Support v1.8 Ben Greear <greearb@candelatech.com>
+All bugs added by David S. Miller <davem@redhat.com>
+VFS: Mounted root (squashfs filesystem) readonly on device 31:2.
+Freeing unused kernel memory: 156k freed
+starting pid 29, tty '': '/etc/init.d/rcS'
+mount: mounting devpts on /dev/pts failed: No such device
+rdm_major = 253
+spiflash_ioctl_read, Read from 0x003ff100 length 0x6, ret 0, retlen 0x6
+Read MAC from flash(  3ff100) 24-2f-ffffffd0-29-35-ffffff84
+GMAC1_MAC_ADRH -- : 0x0000242f
+GMAC1_MAC_ADRL -- : 0xd0293584
+Ralink APSoC Ethernet Driver Initilization. v3.1  256 rx/tx descriptors allocated, mtu = 1500!
+NAPI enable, Tx Ring = 256, Rx Ring = 256
+spiflash_ioctl_read, Read from 0x003ff100 length 0x6, ret 0, retlen 0x6
+Read MAC from flash(  3ff100) 24-2f-ffffffd0-29-35-ffffff84
+GMAC1_MAC_ADRH -- : 0x0000242f
+GMAC1_MAC_ADRL -- : 0xd0293584
+PROC INIT OK!
+add domain:tplinkwifi.net
+add domain:tplinkap.net
+add domain:tplinkrepeater.net
+add domain:tplinklogin.net
+tp_domain init ok
+L2TP core driver, V2.0
+PPPoL2TP kernel driver, V2.0
+Set: phy[0].reg[0] = 3900
+Set: phy[1].reg[0] = 3900
+Set: phy[2].reg[0] = 3900
+Set: phy[3].reg[0] = 3900
+Set: phy[4].reg[0] = 3900
+Set: phy[0].reg[0] = 3300
+Set: phy[1].reg[0] = 3300
+Set: phy[2].reg[0] = 3300
+Set: phy[3].reg[0] = 3300
+Set: phy[4].reg[0] = 3300
+resetMiiPortV over.
+Set: phy[0].reg[4] = 01e1
+Set: phy[0].reg[0] = 3300
+Set: phy[1].reg[4] = 01e1
+Set: phy[1].reg[0] = 3300
+Set: phy[2].reg[4] = 01e1
+Set: phy[2].reg[0] = 3300
+Set: phy[3].reg[4] = 01e1
+Set: phy[3].reg[0] = 3300
+Set: phy[4].reg[4] = 01e1
+Set: phy[4].reg[0] = 3300
+turn off flow control over.
+starting pid 79, tty '/dev/ttyS1': '/bin/sh'
+~ # [ util_execSystem ] 185:  ipt_init cmd is "/var/tmp/dconf/rc.router"
+
+[ dm_readFile ] 2061:  can not open xml file /var/tmp/pc/reduced_data_model.xml!, about to open file /etc/reduced_data_model.xml
+spiflash_ioctl_read, Read from 0x003e0000 length 0x10000, ret 0, retlen 0x10000
+spiflash_ioctl_read, Read from 0x003e0000 length 0xa1c0, ret 0, retlen 0xa1c0
+===>Enter Routerspiflash_ioctl_read, Read from 0x003ff100 length 0x6, ret 0, retlen 0x6
+ mode
+[ oal_sys_readMaspiflash_ioctl_read, Read from 0x003ff200 length 0x4, ret 0, retlen 0x4
+cFlash ] 2061:  spiflash_ioctl_read, Read from 0x003ff300 length 0x4, ret 0, retlen 0x4
+ 3ff100 set flasspiflash_ioctl_read, Read from 0x003ff400 length 0x10, ret 0, retlen 0x10
+h mac : 24:2F:D0spiflash_ioctl_read, Read from 0x003ff500 length 0x29, ret 0, retlen 0x29
+:29:35:84.
+spiflash_ioctl_read, Read from 0x003ff600 length 0x21, ret 0, retlen 0x21
+spiflash_ioctl_read, Read from 0x003ff700 length 0x10, ret 0, retlen 0x10
+spiflash_ioctl_read, Read from 0x003ff700 length 0x10, ret 0, retlen 0x10
+spiflash_ioctl_read, Read from 0x00010000 length 0x1d0, ret 0, retlen 0x1d0
+spiflash_ioctl_read, Read from 0x003ff100 length 0x6, ret 0, retlen 0x6
+[ oal_sys_readMacFlash ] 2061:   3ff100 set flash mac : 24:2F:D0:29:35:84.
+sendto: No such file or directory
+pid 78 send 2001 error
+[ util_execSystem ] 185:  oal_startDynDns cmd is "dyndns /var/tmp/dconf/dyndns.conf"
+
+Get SNTP new config
+[ util_execSystem ] 185:  oal_startNoipDns cmd is "noipdns /var/tmp/dconf/noipdns.conf"
+
+[ util_execSystem ] 185:  oal_startCmxDns cmd is "cmxdns /var/tmp/dconf/cmxdns.conf"
+
+ioctl: No such device
+[ util_execSystem ] 185:  oal_br_addBridge cmd is "brctl addbr br0;brctl setfd br0 0;brctl stp br0 off"
+
+[ util_execSystem ] 185:  oal_ipt_addLanRules cmd is "iptables -t filter -A INPUT -i br+ -j ACCEPT
+"
+
+[ util_execSystem ] 185:  oal_intf_setIntf cmd is "ifconfig br0 192.168.0.1 netmask 255.255.255.0 up"
+
+[ util_execSystem ] 185:  oal_util_setProcLanAddr cmd is "echo "br0 16820416,"Raeth v3.1 ( > /proc/net/conNAPI
+ntract_LocalAddr,SkbRecycle"
+
+[ util_exec)
+System ] 185:  o
+phy_tx_ring = 0x00ca4000, tx_ring = 0xa0ca4000
+al_intf_enableIn
+phy_rx_ring0 = 0x00ca5000, rx_ring0 = 0xa0ca5000
+tf cmd is "ifcon[fe_sw_init:5357]rt305x_esw_init.
+fig eth0 up"
+
+disable switch phyport...
+GMAC1_MAC_ADRH -- : 0x0000242f
+GMAC1_MAC_ADRL -- : 0xd0293584
+RT305x_ESW: Link Status Changed
+[ rsl_getUnusedVlan ] 1099:  GET UNUSED VLAN TAG 1 : [3]
+[ rsl_getUnusedVlan ] 1099:  GET UNUSED VLAN TAG 2 : [4]
+[ rsl_getUnusedVlan ] 1099:  GET UNUSED VLAN TAG 3 : [5]
+[ rsl_getUnusedVlan ] 1099:  GET UNUSED VLAN TAG 4 : [6]
+[ util_execSystem ] 185:  oal_addVlanTagIntf cmd is "vconfig add eth0 3"
+
+[ util_execSystem ] 185:  oal_intf_enableIntf cmd is "ifconfig eth0.3 up"
+
+set if eth0.3 to *not wan dev
+[ util_execSystem ] 185:  oal_addVlanTagIntf cmd is "vconfig add eth0 4"
+
+[ util_execSystem ] 185:  oal_intf_enableIntf cmd is "ifconfig eth0.4 up"
+
+set if eth0.4 to *not wan dev
+[ util_execSystem ] 185:  oal_addVlanTagIntf cmd is "vconfig add eth0 5"
+
+[ util_execSystem ] 185:  oal_intf_enableIntf cmd is "ifconfig eth0.5 up"
+
+set if eth0.5 to *not wan dev
+[ util_execSystem ] 185:  oal_addVlanTagIntf cmd is "vconfig adddevice eth0.3 entered promiscuous mode
+ eth0 6"
+
+[ utdevice eth0 entered promiscuous mode
+il_execSystem ] br0: port 1(eth0.3) entering forwarding state
+185:  oal_intf_ebr0: port 1(eth0.3) entering forwarding state
+nableIntf cmd is "ifconfig eth0.6 up"
+
+set if eth0.6 to *not wan dev
+[ util_edevice eth0.4 entered promiscuous mode
+xecSystem ] 185:br0: port 2(eth0.4) entering forwarding state
+  oal_addVlanTagbr0: port 2(eth0.4) entering forwarding state
+Intf cmd is "vconfig add eth0 2"
+
+[ util_execSystem ] 185:  oal_intf_enableIntdevice eth0.5 entered promiscuous mode
+f cmd is "ifconfbr0: port 3(eth0.5) entering forwarding state
+ig eth0.2 up"
+br0: port 3(eth0.5) entering forwarding state
+
+set if eth0.2 to wan dev
+[ vlan_addLanPortsIntoBridge ] 606:  add lan Port 255device eth0.6 entered promiscuous mode
+ from br0
+[ utibr0: port 4(eth0.6) entering forwarding state
+l_execSystem ] 1br0: port 4(eth0.6) entering forwarding state
+85:  oal_br_addIntfIntoBridge cmd is "brctl addif br0 eth0.3"
+
+[ util_execSystem ] 185:  oal_br_addIntfIntoBridge cmd is "brctl addif br0 eth0.4"
+
+[ util_execSystem ] 185:  oal_br_addIntfIntoBridge cmd is "brctl addif br0 eth0.5"
+
+[ util_execSystem ] 185:  oal_br_addIntfIntoBridge cmd is "brctl addif br0 eth0.6"
+
+[ util_execSystem ] 185:  rsl_initIPv6CfgObj cmd is "echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6"
+
+[ util_execSystem ] 185:  oal_eth_setIGMPSnoopParam cmd is "for i in /sys/devices/virtual/net/*/bridge/multicast_snooping;do echo 1 > $i ; done"
+
+[ util_execSystem ] 185:  oal_wlan_ra_setCountryRegion cmd is "cp /etc/SingleSKU_FCC.dat /var/Wireless/RT2860AP/SingleSKU.dat"
+
+[ util_execSystem ] 185:  oal_wlan_ra_setCountryRegion cmd is "iwpriv ra0 set CountryRegion=0"
+
+ra0       no private ioctls.
+
+[ util_execSystem ] 185:  oal_wlan_ra_loadDriver cmd is "insmod /lib/modules/kmdir/kernel/drivers/net/wireless/mt_wifi_ap/mt_wifi.ko"
+
+ADDRCONF(NETDEV_CHANGE): eth0.4: link becomes ready
+ADDRCONF(NETDEV_CHANGE): eth0.5: link becomes ready
+ADDRCONF(NETDEV_CHANGE): eth0.6: link becomes ready
+ADDRCONF(NETDEV_CHANGE): eth0.2: link becomes ready
+[ util_execSystem ] 185:  oal_wlan_ra_initWlan cmd is "ifconfig ra0 up"
+
+[RTMPReadParametersHook:297]wifi read profile faild.
+efuse_probe: efuse = 10000012
+exec!
+spiflash_ioctl_read, Read from 0x003f0000 length 0x400, ret 0, retlen 0x400
+eeFlashId = 0x7628!
+tssi_1_target_pwr_g_band = 36
+[ util_execSystem ] 185:  oal_wlan_ra_initWlan cmd is "echo 1 > /proc/tplink/led_wlan_24G"
+
+[ util_execSystem ] 185:  oal_wlan_ra_initWlan cmd is "iwpriv ra0 set ed_chk=0"
+
+[ util_execSystem ] 185:  oal_wlan_ra_setStaNum cmd is "iwpriv ra0 set MaxStaNum=32"
+
+[ util_execSystem ] 185device ra0 entered promiscuous mode
+:  oal_br_addIntbr0: port 5(ra0) entering forwarding state
+fIntoBridge cmd br0: port 5(ra0) entering forwarding state
+is "brctl addif br0 ra0"
+
+[ util_execSystem ] 185:  oal_br_addIntfIntoBridge cdevice apcli0 entered promiscuous mode
+md is "brctl addif br0 apcli0"
+
+[ util_execSystem ] 185:  oal_br_addIntfIntoBrdevice ra1 entered promiscuous mode
+idge cmd is "brctl addif br0 ra1"
+
+[ util_execSystem ] 185:  oal_wlan_ra_initEspiflash_ioctl_read, Read from 0x003f0000 length 0x2, ret 0, retlen 0x2
+nd cmd is "wlNetlinkTool &"
+
+[ util_execSystem ] 185:  oal_wlan_ra_initEnd cmd is "killall -q wscd"
+
+[ util_execSystem ] 185:  oal_wlan_ra_initEnd cmd is "wscd -i ra0 -m 1 -w /var/tmp/wsc_upnp/ &"
+
+[ util_execSystem ] 185:  rsl_initLanWlanObj cmd is "echo 0 > /proc/tplink/wl_mode"
+
+WLAN-Start wlNetlinkTool
+Waiting for Wireless Events from interfaces...
+swWlanChkAhbErr: netlink to do
+[ oal_wlan_ra_loadDriver ] 2120:  no 5G chip.
+
+
+[ rsl_initLanWlanObj ] 9639:  perror:1
+wscd: SSDP UDP PORT = 1900
+sendto: No such file or directory
+pid 78 send 2030 error
+sendto: No such file or directory
+pid 78 send 2030 error
+sendto: No such file or directory
+pid 78 send 2030 error
+sendto: No such file or directory
+pid 78 send 2030 error
+sendto: No such file or directory
+pid 78 send 2030 error
+sendto: No such file or directory
+pid 78 send 2004 error
+[ util_execSystem ] 185:  oal_startDhcps cmd is "dhcpd /var/tmp/dconf/udhcpd.conf"
+
+[ util_execSystem ] 185:  oal_lan6_startDhcp6s cmd is "dhcp6s -c /var/tmp/dconf/dhcp6s_br0.conf -P /var/run/dhcp6s_br0.pid br0 &"
+
+iptables: Bad rule (does a matching rule exist in that chain?).
+[ util_execSystem ] 185:  oal_lan6_startRadvd cmd is "radvd -C /var/tmp/dconf/radvd_br0.conf -p /var/run/radvd_br0.pid &"
+
+[ rsl_initEwanObj ] 298: Initialize EWAN, enable(1)!
+[ rsl_setEwanObj ] 208: Get Ethernet's stack!
+[ rsl_setEwanObj ] 262: enable ethernet interface now!
+[ oal_ewan_enable ] 469: pEwan->ifName(eth0.2)
+[ util_execSystem ] 185:  oal_br_delIntfFromBridge cmd is "brctl delif br0 eth0.2"
+
+brctl: bridge br0: Invalid argument
+[ rsl_setEwanObj ] 268: EWAN.ifname(eth0.2)!
+[ wan_conn_wanIpConn_getConnectionInfo ] 906: GET MAC(24:2F:D0:29:35:85) successfully!
+[ util_execSystem ] 185:  oal_intf_setIfMac cmd is "ifconfig eth0.2 down"
+
+[ util_execSystem ] 185:  oal_intf_setIfMac cmd is "ifconfig eth0.2 hw ether 24:2F:D0:29:35:85 up"
+
+[ util_execSystem ] 185:  oal_intf_enableIntf cmd is "ifconfig eth0.2 up"
+
+[ rsl_initWanPppConnObj ] 398: into rsl_initWanPppConnObj!
+[ rsl_initWanPppConnObj ] 515: rsl_initWanPppConnObj successed!
+[ rsl_initWanPppConnObj ] 398: into rsl_initWanPppConnObj!
+[ rsl_initWanPppConnObj ] 515: rsl_initWanPppConnObj successed!
+radvd starting
+[Jan 01 08:00:07] radvd: no linklocal address configured for br0
+[Jan 01 08:00:07] radvd: error parsing or activating the config file: /var/tmp/dconf/radvd_br0.conf
+[ rsl_initAppObj ] 1068:  ==> start dhcp client
+
+[ util_execSystem ] 185:  oal_ipt_fwDdos cmd is "iptables -D FORWARD -j FIREWALL_DDOS
+"
+
+iptables: No chain/target/match by that name.
+[ util_execSystem ] 185:  oal_ipt_forbidLanPing cmd is "iptables -t filter -D INPUT -i br+ -p icmp --icmp-type echo-request -j DROP
+iptables -t filter -D FORWARD -i br+ -p icmp --icmp-type echo-request -j DROP"
+
+iptables: Bad rule (does a matching rule exist in that chain?).
+iptables: Bad rule (does a matching rule exist in that chain?).
+[ util_execSystem ] 185:  oal_ddos_delPingRule cmd is "iptables -t filter -D INPUT ! -i br+ -p icmp --icmp-type echo-request -j ACCEPT
+"
+
+iptables: Bad rule (does a matching rule exist in that chain?).
+[ util_execSystem ] 185:  oal_ddos_delPingRule cmd is "iptables -t filter -D INPUT ! -i br+ -p icmp --icmp-type echo-request -d 192.168.0.1 -j DROP
+"
+
+iptables: Bad rule (does a matching rule exist in that chain?).
+[ util_execSystem ] 185:  oal_ipt_setDDoSRules cmd is "iptables -F FIREWALL_DDOS"
+
+[ util_execSystem ] 185:  ddos_clearAll cmd is "rm -f /var/tmp/dosHost"
+
+sh: diagTool: not found
+[ util_execSystem ] 185:  oal_initFirewallObj cmd is "ebtables -N FIREWALL"
+
+[ util_execSystem ] 185:  oal_initIp6FirewallObj cmd is "ip6tables -F"
+
+[ util_execSystem ] 185:  oal_initIp6FirewallObj cmd is "ip6tables -X"
+
+[ util_execSystem ] 185:  oal_initIp6FirewallObj cmd is "ip6tables -P INPUT ACCEPT"
+
+[ util_execSystem ] 185:  oal_initIp6FirewallObj cmd is "ip6tables -P FORWARD DROP"
+
+[ util_execSystem ] 185:  oal_initIp6FirewallObj cmd is "ip6tables -P OUTPUT ACCEPT"
+
+[ util_execSystem ] 185:  oal_initIp6FirewallObj cmd is "ip6tables -N FIREWALL"
+
+[ util_execSystem ] 185:  oal_initIp6FirewallObj cmd is "ip6tables -N FWRULE"
+
+[ util_execSystem ] 185:  oal_initIp6FirewallObj cmd is "ip6tables -N SETMSS"
+
+[ util_execSystem ] 185:  oal_initIp6FirewallObj cmd is "ip6tables -A INPUT -i lo -p ALL -j ACCEPT -m comment 					--comment "loop back""
+
+[ util_execSystem ] 185:  oal_initIp6FirewallObj cmd is "ip6tables -A INPUT  -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT"
+
+[ util_execSystem ] 185:  oal_initIp6FirewallObj cmd is "ip6tables -A INPUT -i br+ -p tcp --dport 23 -j ACCEPT"
+
+[ util_execSystem ] 185:  oal_initIp6FirewallObj cmd is "ip6tables -A INPUT -p tcp --dport 23 -j DROP"
+
+[ util_execSystem ] 185:  oal_initIp6FirewallObj cmd is "ip6tables -A INPUT -i br+ -p tcp --dport 22 -j ACCEPT"
+
+[ util_execSystem ] 185:  oal_initIp6FirewallObj cmd is "ip6tables -A INPUT -p tcp --dport 22 -j DROP"
+
+[ util_execSystem ] 185:  oal_initIp6FirewallObj cmd is "ip6tables -A INPUT -i br+ -p icmpv6 --icmpv6-type echo-request -j ACCEPT"
+
+[ util_execSystem ] 185:  oal_initIp6FirewallObj cmd is "ip6tables -A INPUT -p icmpv6 --icmpv6-type echo-request -j DROP"
+
+[ util_execSystem ] 185:  oal_initIp6FirewallObj cmd is "ip6tables -A FORWARD -i br+ -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT"
+
+[ util_execSystem ] 185:  oal_initIp6FirewallObj cmd is "ip6tables -A FORWARD -o br+ -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT"
+
+[ util_execSystem ] 185:  oal_initIp6FirewallObj cmd is "ip6tables -A FORWARD -j FIREWALL"
+
+[ util_execSystem ] 185:  oal_initIp6FirewallObj cmd is "ip6tables -I FORWARD 1 -j SETMSS"
+
+[ util_execSystem ] 185:  oal_fw6_setFwEnabeld cmd is "ip6tables -D FIREWALL -j ACCEPT"
+
+ip6tables: Bad rule (does a matching rule exist in that chain?).
+[ util_execSystem ] 185:  oal_fw6_setFwEnabeld cmd is "ip6tables -F FIREWALL"
+
+[ util_execSystem ] 185:  oal_fw6_setFwEnabeld cmd is "ip6tables -A FIREWALL -j ACCEPT"
+
+[ rsl_initWanL2tpConnObj ] 245: L2TP Connection(ewan_l2tp) is not enable.
+
+[ rsl_initWanL2tpConnObj ] 245: L2TP Connection() is not enable.
+
+[ rsl_initWanPptpConnObj ] 239: PPTP Connection(ewan_pptp) is not enable.
+
+[ rsl_initWanPptpConnObj ] 239: PPTP Connection() is not enable.
+
+[ util_execSystem ] 185:  setupModules cmd is "insmod /lib/modules/kmdir/kernel/net/netfilter/nf_conntrack_ftp.ko"
+
+[ util_execSystem ] 185:  setupModules cmd is "insmod /lib/modules/kmdir/kernel/net/ipv4/netfilter/nf_nat_ftp.ko"
+
+[ util_execSystem ] 185:  oal_openAlg cmd is "iptables -D FORWARD_VPN_PASSTHROUGH  -p udp --dport 500 -j DROP"
+
+iptables: Bad rule (does a matching rule exist in that chain?).
+[ util_execSystem ] 185:  setupModules cmd is "insmod /lib/modules/kmdir/kernel/net/ipv4/netfilter/nf_nat_proto_gre.ko"
+
+[ util_execSystem ] 185:  setupModules cmd is "insmod /lib/modules/kmdir/kernel/net/ipv4/netfilter/nf_nat_pptp.ko"
+
+[ util_execSystem ] 185:  oal_openAlg cmd is "iptables -D FORWARD_VPN_PASSTHROUGH  -p tcp --dport 1723 -j DROP"
+
+iptables: Bad rule (does a matching rule exist in that chain?).
+[ util_execSystem ] 185:  oal_openAlg cmd is "iptables -D FORWARD_VPN_PASSTHROUGH  -p udp --dport 1701 -j DROP"
+
+iptables: Bad rule (does a matching rule exist in that chain?).
+[ util_execSystem ] 185:  setupModules cmd is "insmod /lib/modules/kmdir/kernel/net/netfilter/nf_conntrack_tftp.ko"
+
+[ util_execSystem ] 185:  setupModules cmd is "insmod /lib/modules/kmdir/kernel/net/ipv4/netfilter/nf_nat_tftp.ko"
+
+[ util_execSystem ] 185:  setupModules cmd is "insmod /lib/modules/kmdir/kernel/net/netfilter/nf_conntrack_h323.ko"
+
+[ util_execSystem ] 185:  setupModules cmd is "insmod /lib/modules/kmdir/kernel/net/ipv4/netfilter/nf_nat_h323.ko"
+
+[ util_execSystem ] 185:  setupModules cmd is "insmod /lib/modules/kmdir/kernel/net/netfilter/nf_conntrack_sip.ko"
+
+[ util_execSystem ] 185:  setupModules cmd is "insmod /lib/modules/kmdir/kernel/net/ipv4/netfilter/nf_nat_sip.ko"
+
+[ util_execSystem ] 185:  setupModules cmd is "insmod /lib/modules/kmdir/kernel/net/netfilter/nf_conntrack_rtsp.ko"
+
+[ util_execSystem ] 185:  setupModules cmd is "insmod /lib/modules/kmdir/kernel/net/ipv4/netfilter/nf_nat_rtsp.ko"
+
+nf_nat_rtsp v0.6.21 loading
+enable switch phyport...
+Set: phy[0].reg[0] = 3900
+Set: phy[1].reg[0] = 3900
+Set: phy[2].reg[0] = 3900
+Set: phy[3].reg[0] = 3900
+Set: phy[4].reg[0] = 3900
+Set: phy[0].reg[0] = 3300
+Set: phy[1].reg[0] = 3300
+Set: phy[2].reg[0] = 3300
+Set: phy[3].reg[0] = 3300
+Set: phy[4].reg[0] = 3300
+resetMiiPortV over.
+[cmd_dutInit():1094] init shm
+[tddp_taskEntry():151] tddp task start
+Set: phy[0].reg[4] = 01e1
+Set: phy[0].reg[0] = 3300
+Set: phy[1].reg[4] = 01e1
+Set: phy[1].reg[0] = 3300
+Set: phy[2].reg[4] = 01e1
+Set: phy[2].reg[0] = 3300
+Set: phy[3].reg[4] = 01e1
+Set: phy[3].reg[0] = 3300
+Set: phy[4].reg[4] = 01e1
+Set: phy[4].reg[0] = 3300
+turn off flow control over.
+[ util_execSystem ] 185:  prepareDropbear cmd is "dropbearkey -t rsa -f /var/tmp/dropbear/dropbear_rsa_host_key"
+
+Will output 1024 bit rsa secret key to '/var/tmp/dropbear/dropbear_rsa_host_key'
+Generating key, this may take a while...
+[ util_execSystem ] 185:  prepareDropbear cmd is "dropbearkey -t dss -f /var/tmp/dropbear/dropbear_dss_host_key"
+
+Will output 1024 bit dss secret key to '/var/tmp/dropbear/dropbear_dss_host_key'
+Generating key, this may take a while...
+[ util_execSystem ] 185:  prepareDropbear cmd is "dropbear -p 22 -r /var/tmp/dropbear/dropbear_rsa_host_key -d /var/tmp/dropbear/dropbear_dss_host_key -A /var/tmp/dropbear/dropbearpwd"
+
+start ntp_request
+[ oal_sys_getOldTZInfo ] 609:  Open TZ file error!
+[ util_execSystem ] 185:  oal_sys_unsetTZ cmd is "echo "" > /etc/TZ"
+
+[ ntp_start ] 504:  ntp connect failed, return.
+
+[ util_execSystem ] 185:  oal_sys_unsetTZ cmd is "echo "" > /etc/TZ"
+
+Get SNTP start config
+start ntp_request
+[ util_execSystem ] 185:  oal_sys_unsetTZ cmd is "echo "" > /etc/TZ"
+
+[ util_execSystem ] 185:  oal_sys_unsetTZ cmd is "echo "" > /etc/TZ"
+
+
+~ # 
+~ # pwd
+/
+~ # ls
+web      usr      sbin     mnt      lib      dev
+var      sys      proc     linuxrc  etc      bin
+~ # cd var
+/var # ls
+https     log       tmp       dev       l2tp
+lock      run       Wireless  passwd
+/var # cat passwd
+admin:$1$$iC.dUsGpxNNJGeOm1dFio/:0:0:root:/:/bin/sh
+dropbear:x:500:500:dropbear:/var/dropbear:/bin/sh
+nobody:*:0:0:nobody:/:/bin/sh
+/var # cd [ ntp_start ] 504:  ntp connect failed, return.
+
+[ util_execSystem ] 185:  oal_sys_unsetTZ cmd is "echo "" > /etc/TZ"
+
+[ util_execSystem ] 185:  oal_sys_unsetTZ cmd is "echo "" > /etc/TZ"
+
+Get SNTP start config
+start ntp_request
+[ util_execSystem ] 185:  oal_sys_unsetTZ cmd is "echo "" > /etc/TZ"
+
+/var/tmp
+/var/tmp # ls
+wsc_upnp    25          7           29          9           15          TZ
+dropbear    6           21          vlan_state  10          30
+dconf       19          23          8           upnpd       14
+/var/tmp # ca[Jd dropbear
+/var/tmp/dropbear # ls
+dropbearpwd            dropbear_dss_host_key
+dropbear_rsa_host_key  fail_count
+/var/tmp/dropbear # cat *
+   ssh-dss    ÄÅY¸\,ä o6«·sË"	I°öşÂlÅ–Ç‰`3HE*C¨rFo)“×%Tç¬•˜‘ä5³l?4¤L•òïÆØ4GV€ıwA»æZŒ‡)'>ğK€Ãiî?†ËÖ[ËÎf›i°Ïuv-Ü+zã½f@íHoCˆJwñ    öréÅHg»8PaF&Nu„2¢…   €~L«LòÅO¶6At@>Q[”ÁIîÍg²Ù&¡ƒø÷»ÆC¯QšBë•ƒOå¬Û!§J^@¦Géõç¨‚­¤jRúÀ… ¢²9é×†dÄ –’KH‰%Äa¢‚1%¬N„°²ûûY@Ş§&õ›XXŠxò0$ëL.ÖûÛœÆ   €|Ù¡aBü`ĞS£0BÏmìúÂJH´”<çÍßBøÅ†j^Èr˜oy,ŞpÏŞ:…s¾³^Ãóğ ›sÿë¯Z Ü%İüJƒ‡N¡H¡Cê”€Sfêcç á`!MWÍÕŠæîÂ-ÛTY}m$¢º~WT	q©0Ñ /<É   )A/Œİ Dt”|şwÙ‹¤wê’   ssh-rsa       ƒ «¾_1xeM,:[ë]¿•Å »uLÅâI’š}>ch°Îæ –'ø‘úC›GŸŠôŞg N#AÂŸÚ ú¤I	fCûÃye ööæç-JöÆòD®wÜ™’‘‹Eø€L f›¹·Mûêœeû*t¨wN°`4¸Q«G‹FŒ[P¶ÌËDG   ‚E† š;SàÓCçP:™³L?6JŸªÂ]ĞÅx­¥f'eôÈ±'”ı^c¯ËõŸôŒ¯<6}¾YÉù bK×û~!‹÷fŠ¶é¾ğbãšqšw]2U“Ş™:^È”ËZqÈ‰MRgˆƒ]8¥ûÌŒÙWáĞZ«lÍ   B ãÌ”€ÑÆ.‚-—ÆöÒU›×j¶\:¾oZ)™¥ä ¶ıs“Ö9È`ÙÿCĞnP={ç¡wı~Ë¼›˜   B ÁG«é3{Dš¾Í`&§Ô•ŸûrÜ™·Ô1Îâé#O1NN¬ÄåpSÃ‡8ÚW&êMKˆîÆmusername:admin
+password:7c6a180b36896a0a8c02787eeafb0e4c
+0 0
+/var/tmp/dropbear # [ ntp_start ] 504:  ntp connect failed, return.
+
+[ util_execSystem ] 185:  oal_sys_unsetTZ cmd is "echo "" > /etc/TZ"
+
+Get SNTP start config
+start ntp_request
+[ util_execSystem ] 185:  oal_sys_unsetTZ cmd is "echo "" > /etc/TZ"
+
+[ util_execSystem ] 185:  oal_sys_unsetTZ cmd is "echo "" > /etc/TZ"
+
